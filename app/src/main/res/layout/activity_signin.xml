@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    tools:ignore="ExtraText">
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"></View> -->
+
+    <ImageView
+        android:id="@+id/fondo_imagen_glide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_login"
+        android:layout_width="230dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Olympus"
+        android:src="@mipmap/ic_launcher_olympus_foreground"
+        app:layout_constraintEnd_toEndOf="@id/guidelineD"
+        app:layout_constraintStart_toStartOf="@id/guidelineI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineD"
+        app:layout_constraintStart_toStartOf="@id/guidelineI"
+        app:layout_constraintTop_toBottomOf="@+id/logo_login"
+        app:startIconDrawable="@drawable/user_foreground">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineD"
+        app:layout_constraintStart_toStartOf="@id/guidelineI"
+        app:layout_constraintTop_toBottomOf="@id/ti_username"
+        app:startIconDrawable="@drawable/lock_foreground">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/botonSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="openMain"
+        android:text="Sign in"
+        app:layout_constraintEnd_toEndOf="@id/guidelineD"
+        app:layout_constraintStart_toStartOf="@id/guidelineI"
+        app:layout_constraintTop_toBottomOf="@id/ti_password" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:hint="Haven't any account? Sign up!"
+        android:onClick="openSignUp"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineD"
+        app:layout_constraintStart_toStartOf="@id/guidelineI"
+        app:layout_constraintTop_toBottomOf="@id/botonSignIn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
