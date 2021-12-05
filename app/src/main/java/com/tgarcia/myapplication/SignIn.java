@@ -34,7 +34,10 @@ public class SignIn extends AppCompatActivity {
 
                 .centerCrop() //Coloca la imagen desde su centro cuando ocupa todo
 
-                //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_700_alpha015)))
+                /* Rellena lo que ocuparia la imagen con lo que le digamos en casop de que no pueda cargarla
+                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_700_alpha015)))
+                 */
+
                 //.circleCrop() //Da forma de circulo
 
                 .into(fondo); //Donde cargar
