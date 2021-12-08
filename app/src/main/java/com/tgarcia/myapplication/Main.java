@@ -153,8 +153,7 @@ public class Main extends AppCompatActivity {
             case R.id.item1:
                 final ConstraintLayout mLayout = findViewById(R.id.myMainConstraint);
                 //Genera un SnackBar
-                Snackbar snackbar = Snackbar
-                        .make(mLayout, "Copied", Snackbar.LENGTH_LONG)
+                Snackbar snackbar = Snackbar.make(mLayout, "Copied", Snackbar.LENGTH_LONG)
                         //Añade un boton al snackbar
                         .setAction("UNDO", new View.OnClickListener() {
                             //Funcionalidad del botón

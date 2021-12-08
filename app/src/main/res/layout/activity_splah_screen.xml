@@ -13,7 +13,6 @@
         android:layout_marginTop="110dp"
         android:contentDescription="un templito"
         android:elevation="24dp"
-        android:onClick="openSignIn"
         android:src="@mipmap/ic_launcher_olympus_foreground"
         app:layout_constraintEnd_toEndOf="@id/guidelineD"
         app:layout_constraintStart_toStartOf="@id/guidelineI"

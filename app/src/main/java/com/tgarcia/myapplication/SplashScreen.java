@@ -42,7 +42,7 @@ public class SplashScreen extends AppCompatActivity {
         openApp(true);
     }
 
-    /*
+    /* Abrir el SignIn con un clic (propiedad OnClic no puesta en el .xml)
     public void openSignIn(View v) {
         //Define la acción de lanzar el Login desde el Splash
         Intent intent = new Intent(SplashScreen.this, Login.class);
