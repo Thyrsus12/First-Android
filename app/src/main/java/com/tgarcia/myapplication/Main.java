@@ -29,11 +29,6 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        WebView mycontext = (WebView) findViewById(R.id.myWebView);
-        registerForContextMenu(myWebView);
-        */
-
         //Inicializar el objeto SwipeRefresh
         swipeLayout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
@@ -48,6 +43,11 @@ public class Main extends AppCompatActivity {
         //myWebVisor.getSettings().setBuiltInZoomControls(true);
         //Cargar la web desde URL
         myWebView.loadUrl("https://thischemicaldoesnotexist.com");
+
+        /* Menu contextual */
+        //Aplica el menú contextual al WebView
+        WebView mycontext = (WebView) findViewById(R.id.myWebView);
+        registerForContextMenu(mycontext);
     }
 
     /* SwipeRefresh */
@@ -140,13 +140,13 @@ public class Main extends AppCompatActivity {
         dialog.show();
     }
 
-    /* Menu mantener pulsado LOS MENUS SE CREAN EN UN XML (menu_context.xml) */
+    /* Menu contextual (mantener pulsado) LOS MENUS SE CREAN EN UN XML (menu_context.xml) */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_context, menu);
     }
 
-    /* Acciones menu mantener pulsado */
+    /* Acciones menu contextual (mantener pulsado) */
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -155,7 +155,9 @@ public class Main extends AppCompatActivity {
                 //Genera un SnackBar
                 Snackbar snackbar = Snackbar
                         .make(mLayout, "Copied", Snackbar.LENGTH_LONG)
+                        //Añade un boton al snackbar
                         .setAction("UNDO", new View.OnClickListener() {
+                            //Funcionalidad del botón
                             @Override
                             public void onClick(View view) {
                                 Snackbar snackbar1 = Snackbar.make(mLayout, "Action is restored!", Snackbar.LENGTH_SHORT);
