@@ -4,7 +4,8 @@
     package="com.tgarcia.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <!-- parentActivityName para que salga la fecha para volver a la que indiquemos -->
+
+    <!-- parentActivityName para que salga la fecha para volver al activity que indiquemos -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_olympus"
