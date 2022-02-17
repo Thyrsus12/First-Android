@@ -17,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splah_screen);
 
-        /* Animación de las CardView */
+        /* Animación de las CardView*/
 
         //Cargar la animacion en un objeto
         Animation scroll = AnimationUtils.loadAnimation(this, R.anim.bg_img_scroll);
